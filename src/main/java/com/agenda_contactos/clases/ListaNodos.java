@@ -113,5 +113,16 @@ public class ListaNodos {
         }
         return -1;
     }
-
+    public String buscarIniciales(String iniciales){
+        String salida = "";
+        Nodo p;
+        p = punta;
+        while(p != null) {
+            if(p.getContacto().getNombre().startsWith(iniciales)) {
+                salida = salida + p.getContacto() + "\n";
+            }
+            p = p.getLiga();
+        }
+        return salida;
+    }
 }

@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 
 public class Controlador_Ventana {
     @FXML
-    private TextField inputNombre, inputNumero, inputBuscar, inputNombreBorrar;
+    private TextField inputNombre, inputNumero, inputBuscar, inputNombreBorrar, inputIniciales;
     @FXML
     private Button botonIngresar;
     @FXML
@@ -48,6 +48,23 @@ public class Controlador_Ventana {
         }
     }
 
+    @FXML
+    private void onBotonBuscarInicialesAction(){
+        if(inputIniciales.getText().isEmpty()){
+            Mensajes.mensajeError("", "El campo de búsquedas está vacío");
+        } else {
+            String iniciales = inputIniciales.getText();
+            String resultados = listaNodos.buscarIniciales(iniciales);
+            inputIniciales.setText("");
+            if (!resultados.isEmpty()) {
+                areaTexto.clear();
+                areaTexto.appendText("Resultados de la búsqueda"+"\n");
+                areaTexto.appendText(resultados);
+            } else{
+                Mensajes.mensajeInformativo("", "Contacto no encontrado");
+            }
+        }
+    }
     @FXML
     private void onBotonBorrarAction(){
         if(inputNombreBorrar.getText().isEmpty()){

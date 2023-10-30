@@ -104,18 +104,22 @@
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Buscar contacto" />
-                        <Label text="Ver estado agenda" GridPane.rowIndex="1" />
                         <Label text="Borrar contacto" GridPane.rowIndex="2" />
                         <Button fx:id="botonBuscar" mnemonicParsing="false" onAction="#onBotonBuscarAction" text="Buscar" GridPane.columnIndex="2" />
-                        <Button fx:id="botonEstado" mnemonicParsing="false" onAction="#onBotonEstadoAction" text="Estado agenda" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBotonBorrarAction" text="Borrar" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <TextField fx:id="inputBuscar" promptText="Nombre a buscar" GridPane.columnIndex="1" />
                         <TextField fx:id="inputNombreBorrar" promptText="Contacto a borrar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Buscar iniciales" GridPane.rowIndex="1" />
+                        <TextField fx:id="inputIniciales" promptText="Iniciales a buscar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="botonBuscarIniciales" mnemonicParsing="false" onAction="#onBotonBuscarInicialesAction" text="Buscar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label text="Ver estado agenda" GridPane.rowIndex="3" />
+                        <Button fx:id="botonEstado" mnemonicParsing="false" onAction="#onBotonEstadoAction" text="Estado agenda" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                </children>
