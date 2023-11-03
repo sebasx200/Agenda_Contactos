@@ -105,8 +105,8 @@ public class ListaNodos {
         }
         Nodo p = punta;
         while (p.getLiga() != null) {
-            if (p.getContacto().getNombre().equals(nombre)) {
-                p.setLiga(p.getLiga());
+            if (p.getLiga().getContacto().getNombre().equals(nombre)) {
+                p.setLiga(p.getLiga().getLiga());
                 contador--;
                 return 1;
             }
